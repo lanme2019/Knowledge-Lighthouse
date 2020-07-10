@@ -81,3 +81,22 @@ java采用可达性分析判断对象存活，但是不可达对象并不是一�
 
 
 ## 垃圾回收器
+
+### Serial/SerialOld收集器
+
+Serial收集器 : 采用标记复制算法 回收新生代
+
+SerialOld收集器 : 采用标记整理算法 回收老年代
+
+特点：单线程  回收垃圾时会中断其他工作线程（stop-the-world）
+
+![Serial收集器工作原理](../../../img/jvm/serial收集器.png)
+
+
+### ParNew收集器
+
+ParNew收集器 : 采用标记复制算法 回收新生代 
+
+特点：是Serial收集器的多线程版本
+
+![ParNew收集器工作原理](../../../img/jvm/parnew收集器.png)
